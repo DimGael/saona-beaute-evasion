@@ -2,33 +2,38 @@
 <html>
 
 <head>
-    <style rel="stylesheet" href="style.css"></style>
+    <link rel="stylesheet" href="styles/output.css" >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <title>Saona Beauté Evasion</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
 </head>
 
 <body>
-    <header>
-        <!-- TODO LOGO -->
-        <h1>Saona Beauté Evasion</h1>
+
+    <header class="text-center pt-3">
+        <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion, un salon d'esthéticienne" class="mx-auto w-40 h-40 mb-4"/>
+        <h1 class="text-3xl text-yellow-300 mb-8">SAONA BEAUTÉ ÉVASION</h1>
+        <div class="separator">
+            <div class="icon"></div>
+        </div>
 
         <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#prestations">Prestations</a></li>
-                <li><a href="#offrir-un-soin">Offrir un soin</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="flex flex-row justify-center text-yellow-200 py-4 text-xl px-50 font-[Baskervville]">
+                <li class="grow flex justify-center"><a href="#accueil">Accueil</a></li>
+                <li class="grow flex justify-center"><a href="#prestations">Prestations</a></li>
+                <li class="grow flex justify-center"><a href="#offrir-un-soin">Offrir un soin</a></li>
+                <li class="grow flex justify-center"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="accueil">
-        <section id="hero">
-            <strong>OFFREZ VOUS UNE PAUSE DE BIEN ÊTRE</strong>
-            <em>Au salon ou à domicile</em>
-            <a href="#prestations"><button>Voir les prestations</button></a>
+        <section id="hero" class="bg-secondary text-center px-50 py-12 flex flex-col h-75 justify-between">
+            <strong class="block font-thin font-serif text-4xl mt-5 text-gray-800 drop-shadow-lg">OFFREZ VOUS UNE PAUSE DE BIEN ÊTRE</strong>
+            <em class="block font-[Alice] text-[#99007D] text-xl mt-5 mb-10 drop-shadow-lg">Au salon ou à domicile</em>
+            <a href="#prestations" class="text-[#CAD007]">
+                <button class="px-15 py-3 bg-[#733C89] text-md font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:opacity-95 hover:scale-104 transition-transform duration-300">Voir les prestations</button></a>
         </section>
 
         <section id="quick-infos">

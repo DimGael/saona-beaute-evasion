@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+body {
+    background-color: #A15AA0;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, gold);
+}
+
+.separator::after {
+    background: linear-gradient(to left, transparent, gold);
+}
+
+.separator .icon {
+    width: 20px;
+    height: 10px;
+    background: gold;
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+    margin: 0 10px;
+}
+
+.bg-secondary {
+    background-color: #FEDEFF;
+}
+
+main + section {
+    padding-block: calc(var(--spacing) * 6);
+}
+
+button {
+    background-color: #733C89;
+}
+
+button:hover{
+    cursor: pointer;
+}
