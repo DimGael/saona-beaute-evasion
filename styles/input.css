@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 body {
-    background-color: #A15AA0;
+    /* background-color: #A15AA0; */
+    background-color: #b670b5;
 }
 
 .separator {
@@ -47,4 +48,19 @@ button {
 
 button:hover{
     cursor: pointer;
+}
+
+.stickynavbar{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#navbar {
+    background-color: #A15AA0;
+}
+
+header {
+    background-color: #A15AA0;
 }
