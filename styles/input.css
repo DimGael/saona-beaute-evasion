@@ -38,19 +38,19 @@ body {
     background-color: #FEDEFF;
 }
 
-main + section {
+main+section {
     padding-block: calc(var(--spacing) * 6);
 }
 
-button {
+button {
     background-color: #733C89;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-.stickynavbar{
+.stickynavbar {
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -63,4 +63,46 @@ button:hover{
 
 header {
     background-color: #A15AA0;
+}
+
+#prestations article>h3 {
+    color: #CAD007;
+    font-family: 'Imperial Script';
+    font-size: 64px;
+    margin-bottom: 2rem;
+}
+
+#prestations article>ul>li>h4 {
+    font-family: 'Alice';
+    font-weight: bold;
+    font-size: 1.875rem;
+    width: 100%;
+}
+
+#prestations article>ul {
+    display: flex;
+    justify-content: space-between;
+    margin:2rem 1rem;
+}
+
+#prestations article {
+    margin:2rem 0;
+}
+
+#prestations article>ul>li>ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#prestations article>ul>li>ul>li div {
+    margin-left: 10rem;
+}
+
+#prestations hr {
+    margin:auto;
+    margin-top: 2rem;
+    width: 50%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, gold, transparent);
 }
