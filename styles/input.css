@@ -106,3 +106,11 @@ header {
     height: 2px;
     background-image: linear-gradient(to right, transparent, gold, transparent);
 }
+
+section h2 {
+    /* text-4xl font-bold font-[Alice] mb-4 */
+    font-size: 2.25rem; /* tailwind text-4xl */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: 'Alice';
+}

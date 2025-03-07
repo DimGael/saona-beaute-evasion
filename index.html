@@ -43,7 +43,7 @@
         </section>
 
         <section id="quick-infos">
-            <ul class="flex flex-row text-center text-lg py-6 text-[#D6DD00] font-bold px-110 mx-auto">
+            <ul class="flex flex-row text-center text-lg py-6 text-[#D6DD00] font-bold mx-auto w-[1025px]">
                 <li class="flex flex-row items-center px-4 border-r-black border-r-1">
                     <svg width="79" height="88" viewBox="0 0 79 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -58,7 +58,7 @@
                             d="M49.725 50.7958L54.275 46.5375L42.25 35.2833V21.2916H35.75V37.7166L49.725 50.7958ZM39 66.9166C34.5042 66.9166 30.2792 66.1182 26.325 64.5213C22.3708 62.9245 18.9312 60.7573 16.0062 58.0198C13.0812 55.2823 10.7656 52.0632 9.05938 48.3625C7.35312 44.6618 6.5 40.7076 6.5 36.5C6.5 32.2923 7.35312 28.3382 9.05938 24.6375C10.7656 20.9368 13.0812 17.7177 16.0062 14.9802C18.9312 12.2427 22.3708 10.0755 26.325 8.47863C30.2792 6.88175 34.5042 6.08331 39 6.08331C43.4958 6.08331 47.7208 6.88175 51.675 8.47863C55.6292 10.0755 59.0688 12.2427 61.9938 14.9802C64.9188 17.7177 67.2344 20.9368 68.9406 24.6375C70.6469 28.3382 71.5 32.2923 71.5 36.5C71.5 40.7076 70.6469 44.6618 68.9406 48.3625C67.2344 52.0632 64.9188 55.2823 61.9938 58.0198C59.0688 60.7573 55.6292 62.9245 51.675 64.5213C47.7208 66.1182 43.4958 66.9166 39 66.9166ZM39 60.8333C46.2042 60.8333 52.3385 58.4633 57.4031 53.7234C62.4677 48.9835 65 43.2423 65 36.5C65 29.7576 62.4677 24.0165 57.4031 19.2765C52.3385 14.5366 46.2042 12.1666 39 12.1666C31.7958 12.1666 25.6615 14.5366 20.5969 19.2765C15.5323 24.0165 13 29.7576 13 36.5C13 43.2423 15.5323 48.9835 20.5969 53.7234C25.6615 58.4633 31.7958 60.8333 39 60.8333Z"
                             fill="black" />
                     </svg>
-                    <p class="ml-2 text-xl">Les mercredis matins et les vendredis toute la journée</p>
+                    <p class="text-xl">Les mercredis matins et les vendredis toute la journée</p>
                 </li>
                 <li class="flex flex-row items-center px-4 w-[400px]">
                     <img src="images/phone.png" alt="Téléphone">
@@ -69,7 +69,7 @@
 
         <section id="prestations" class="bg-secondary pt-20 pb-8">
             <div class="w-[1025px] mx-auto">
-                <h2 class="text-4xl font-bold font-[Alice] mb-4">PRESTATIONS</h2>
+                <h2>PRESTATIONS</h2>
                 <article id="prestations-epilation">
                     <h3>Epilations</h3>
 
@@ -198,18 +198,67 @@
             </div>
         </section>
 
-        <section id="offrir-un-soin">
-            <h2>Offrir une carte cadeau</h2>
-            <form id="offrir-un-soin">
+        <section id="offrir-un-soin" class="pb-15 pt-15 w-[1025px] mx-auto">
+            <h2 class="text-white">OFFRIR UN SOIN</h2>
+            <div class="bg-pink-200 mx-8 p-8 mt-6 rounded-lg">
+                <h2 class="text-xl font-semibold text-purple-900 text-center">Recevoir une carte cadeau</h2>
+                <p class="mt-2 text-center">
+                    Saisissez votre adresse mail et achetez une carte cadeau à offrir à vos proches.
+                </p>
+                <p class="mt-1 text-center">Recevez par la suite votre carte cadeau via voie postale.</p>
 
-            </form>
+                <form class="mt-6 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium">Valeur de la carte cadeau</label>
+                        <input type="text" placeholder="Ex : 23€"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Adresse mail</label>
+                        <input type="email" placeholder="Votre adresse mail"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300">
+                        Recevoir ma carte
+                    </button>
+                </form>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="">
+        <section id="contact" class="bg-secondary pt-15 pb-15">
+            <div class="w-[1025px] mx-auto">
+                <h2>NOUS CONTACTER</h2>
+                <form class="mt-6 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium">Adresse mail</label>
+                        <input type="email" placeholder="Votre adresse mail"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
 
-            </form>
+
+                    <div>
+                        <label class="block text-sm font-medium">Objet du message</label>
+                        <input type="text" placeholder="L'objet de votre de message"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Votre message</label>
+                        <textarea placeholder="Votre message ..."
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white"></textarea>
+                    </div>
+
+                    <div class="">
+                        <button type="submit"
+                            class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 mx-auto">
+                            Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
