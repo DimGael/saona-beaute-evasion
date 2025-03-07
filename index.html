@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
 
 <head>
     <link rel="stylesheet" href="styles/output.css">
@@ -11,17 +11,17 @@
 
 <body>
     <header class="text-center pt-10">
-        <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="mx-auto w-40 mb-4" />
-        <h1 class="text-3xl text-yellow-300 mb-8">SAONA BEAUTÉ ÉVASION</h1>
+        <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="mx-auto w-25 mb-4" />
+        <h1 class="text-3xl text-yellow-300 mb-8 font-[Helvetica] font-thin">SAONA BEAUTÉ ÉVASION</h1>
         <div class="separator">
             <div class="icon"></div>
         </div>
     </header>
 
-    <nav id="navbar" class="drop-shadow-xl">
-        <ul class="flex flex-row items-center justify-between text-yellow-200 text-lg px-110 py-4 font-[Baskervville]">
+    <nav id="navbar" class="drop-shadow-xl stickynavbar">
+        <ul class="flex flex-row items-center justify-between text-yellow-200 text-lg max-w-[1025px] py-4 mx-auto font-[Baskervville]">
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
-                    href="#accueil">ACCUEIL</a></li>
+                    href="#">ACCUEIL</a></li>
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
                     href="#prestations">PRESTATIONS</a></li>
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
@@ -33,7 +33,7 @@
 
     <main id="accueil">
         <section id="hero" class="bg-secondary text-center py-20 flex flex-col justify-between">
-            <strong class="block font-thin font-serif text-5xl mt-5 text-gray-800 drop-shadow-lg">OFFREZ VOUS UNE PAUSE
+            <strong class="block font-thin text-5xl mt-5 text-gray-800 drop-shadow-lg font-[Didot,serif]">OFFREZ VOUS UNE PAUSE
                 DE BIEN ÊTRE</strong>
             <em class="block font-[Alice] text-[#99007D] text-3xl mt-5 mb-10 drop-shadow-lg">Au salon ou à domicile</em>
             <a href="#prestations" class="text-[#CAD007]">
@@ -43,14 +43,14 @@
         </section>
 
         <section id="quick-infos">
-            <ul class="flex flex-row text-center text-lg py-6 text-[#D6DD00] font-bold mx-auto w-[1025px]">
+            <ul class="flex flex-row text-lg py-6 text-[#D6DD00] mx-auto w-[1025px]">
                 <li class="flex flex-row items-center px-4 border-r-black border-r-1">
                     <svg width="79" height="88" viewBox="0 0 79 88" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M39.5002 80.6666C38.7321 80.6666 38.0738 80.4222 37.5252 79.9333C36.9766 79.4444 36.5651 78.8028 36.2908 78.0083C35.2484 74.5861 33.9318 71.3778 32.3408 68.3833C30.8047 65.3889 28.6377 61.875 25.8397 57.8416C23.0418 53.8083 20.7651 49.9583 19.0095 46.2916C17.3088 42.625 16.4585 38.1944 16.4585 33C16.4585 25.85 18.6804 19.8 23.1241 14.85C27.6227 9.83887 33.0814 7.33331 39.5002 7.33331C45.9189 7.33331 51.3502 9.83887 55.7939 14.85C60.2925 19.8 62.5418 25.85 62.5418 33C62.5418 38.5611 61.5818 43.2055 59.6616 46.9333C57.7963 50.6 55.6293 54.2361 53.1606 57.8416C50.1981 62.2416 47.9488 65.9083 46.4127 68.8416C44.9314 71.7139 43.697 74.7694 42.7095 78.0083C42.4352 78.8639 41.9963 79.5361 41.3929 80.025C40.8443 80.4528 40.2134 80.6666 39.5002 80.6666ZM39.5002 42.1666C41.8043 42.1666 43.7519 41.2805 45.3429 39.5083C46.9338 37.7361 47.7293 35.5666 47.7293 33C47.7293 30.4333 46.9338 28.2639 45.3429 26.4916C43.7519 24.7194 41.8043 23.8333 39.5002 23.8333C37.196 23.8333 35.2484 24.7194 33.6575 26.4916C32.0665 28.2639 31.271 30.4333 31.271 33C31.271 35.5666 32.0665 37.7361 33.6575 39.5083C35.2484 41.2805 37.196 42.1666 39.5002 42.1666Z"
                             fill="#050505" />
                     </svg>
-                    <p class="text-xl">Au salon de coiffure "Esté’ Coiff’" à Bonnac la Côte</p>
+                    <p class="text-xl ml-3">Au salon de coiffure "Esté’ Coiff’" à Bonnac la Côte</p>
                 </li>
                 <li class="flex flex-row items-center px-4 border-r-black border-r-1">
                     <svg width="78" height="73" viewBox="0 0 78 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@
                             d="M49.725 50.7958L54.275 46.5375L42.25 35.2833V21.2916H35.75V37.7166L49.725 50.7958ZM39 66.9166C34.5042 66.9166 30.2792 66.1182 26.325 64.5213C22.3708 62.9245 18.9312 60.7573 16.0062 58.0198C13.0812 55.2823 10.7656 52.0632 9.05938 48.3625C7.35312 44.6618 6.5 40.7076 6.5 36.5C6.5 32.2923 7.35312 28.3382 9.05938 24.6375C10.7656 20.9368 13.0812 17.7177 16.0062 14.9802C18.9312 12.2427 22.3708 10.0755 26.325 8.47863C30.2792 6.88175 34.5042 6.08331 39 6.08331C43.4958 6.08331 47.7208 6.88175 51.675 8.47863C55.6292 10.0755 59.0688 12.2427 61.9938 14.9802C64.9188 17.7177 67.2344 20.9368 68.9406 24.6375C70.6469 28.3382 71.5 32.2923 71.5 36.5C71.5 40.7076 70.6469 44.6618 68.9406 48.3625C67.2344 52.0632 64.9188 55.2823 61.9938 58.0198C59.0688 60.7573 55.6292 62.9245 51.675 64.5213C47.7208 66.1182 43.4958 66.9166 39 66.9166ZM39 60.8333C46.2042 60.8333 52.3385 58.4633 57.4031 53.7234C62.4677 48.9835 65 43.2423 65 36.5C65 29.7576 62.4677 24.0165 57.4031 19.2765C52.3385 14.5366 46.2042 12.1666 39 12.1666C31.7958 12.1666 25.6615 14.5366 20.5969 19.2765C15.5323 24.0165 13 29.7576 13 36.5C13 43.2423 15.5323 48.9835 20.5969 53.7234C25.6615 58.4633 31.7958 60.8333 39 60.8333Z"
                             fill="black" />
                     </svg>
-                    <p class="text-xl">Les mercredis matins et les vendredis toute la journée</p>
+                    <p class="text-xl ml-4">Les mercredis matins et les vendredis toute la journée</p>
                 </li>
                 <li class="flex flex-row items-center px-4 w-[400px]">
                     <img src="images/phone.png" alt="Téléphone">
@@ -67,12 +67,11 @@
             </ul>
         </section>
 
-        <section id="prestations" class="bg-secondary pt-20 pb-8">
+        <section id="prestations" class="bg-secondary py-15">
             <div class="w-[1025px] mx-auto">
                 <h2>PRESTATIONS</h2>
                 <article id="prestations-epilation">
                     <h3>Epilations</h3>
-
                     <ul>
                         <li>
                             <h4>Visage</h4>
@@ -270,10 +269,10 @@
         <p>© 2025</p>
         <!-- TODO logo & RS-->
 
-        <h3>Réseaux Sociaux</h3>
+        <h3 class="text-2xl">Réseaux Sociaux</h3>
         <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61569319857908">Facebook</a></li>
-            <li><a href="https://www.instagram.com/saona.beaute.evasion/">Instagram</a></li>
+            <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61569319857908">Facebook</a></li>
+            <li><a target="_blank" href="https://www.instagram.com/saona.beaute.evasion/">Instagram</a></li>
         </ul>
     </footer>
 

@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 body {
-    /* background-color: #A15AA0; */
-    background-color: #b670b5;
+    background-color: #A15AA0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: #A15AA0;
 }
 
 .separator {
@@ -61,22 +65,19 @@ button:hover {
     background-color: #A15AA0;
 }
 
-header {
-    background-color: #A15AA0;
-}
-
 #prestations article>h3 {
     color: #CAD007;
-    font-family: 'Imperial Script';
-    font-size: 64px;
+    font-family: cursive;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
 #prestations article>ul>li>h4 {
-    font-family: 'Alice';
+    font-family: cursive;
     font-weight: bold;
     font-size: 1.875rem;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 #prestations article>ul {
@@ -92,6 +93,7 @@ header {
 #prestations article>ul>li>ul li {
     display: flex;
     justify-content: space-between;
+    font-size: 0.9rem;
 }
 
 #prestations article>ul>li>ul>li div {
@@ -108,9 +110,8 @@ header {
 }
 
 section h2 {
-    /* text-4xl font-bold font-[Alice] mb-4 */
     font-size: 2.25rem; /* tailwind text-4xl */
-    font-weight: bold;
+    font-weight: thin;
     margin-bottom: 1rem;
-    font-family: 'Alice';
+    font-family: serif;
 }
