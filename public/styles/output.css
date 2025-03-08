@@ -251,6 +251,9 @@
   .max-w-\[1025px\] {
     max-width: 1025px;
   }
+  .scroll-mt-15 {
+    scroll-margin-top: calc(var(--spacing) * 15);
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -341,11 +344,8 @@
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
-  .pt-15 {
-    padding-top: calc(var(--spacing) * 15);
-  }
-  .pb-15 {
-    padding-bottom: calc(var(--spacing) * 15);
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;

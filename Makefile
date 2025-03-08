@@ -1,5 +1,5 @@
 tailwind:
-	npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch
+	npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css --watch
 
 serve:
 	npx vite
