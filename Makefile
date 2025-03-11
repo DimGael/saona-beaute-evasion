@@ -1,3 +1,7 @@
+install:
+	npm i
+	npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css
+
 tailwind:
 	npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css --watch
 

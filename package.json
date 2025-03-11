@@ -11,5 +11,9 @@
     "nodemailer": "^6.10.0",
     "tailwindcss": "^4.0.8",
     "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "dev": "npx vite public",
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css"
   }
 }
