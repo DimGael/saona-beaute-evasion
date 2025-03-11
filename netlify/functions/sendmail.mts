@@ -1,9 +1,22 @@
-import { Context, Handler } from '@netlify/functions'
+import { Context } from '@netlify/functions'
 const nodemailer = require('nodemailer');
+const { verify } = require('hcaptcha');
 require('dotenv').config();
 
 export default async (req: Request, context: Context) => {
   try {
+    const data = await req.json();
+
+    const secret = process.env.CAPTCHA_KEY;
+    const token = data["h-captcha-response"];
+
+    const captchaData = await verify(secret, token).catch((error) => {
+      throw new Error(error);
+    })
+    if (captchaData.success !== true) {
+      console.log('verification failed');
+      throw new Error("Error during captcha validation");
+    }
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -15,23 +28,29 @@ export default async (req: Request, context: Context) => {
       },
     });
 
-    const data = await req.json();
-    
-    const html = 
+
+    const html =
       '<main><p>Email envoyé via le site Saona Beauté Evasion par le formulaire de contact</p>' +
-      '<p><em>Adresse email saisie dans le formulaire de contact par l \'utilisateur : ' + data.email + '</em></p>' +
-      '<h2>Objet : '+data.subject+'</h2>' +
-      '<h2>Message :</h2><p style="font-size:1.1rem;">'+data.message + '</p></main>';
+      '<p><em>Adresse email saisie dans le formulaire de contact par l\'utilisateur : ' + data.email + '</em></p>' +
+      '<h2>Objet : ' + data.subject + '</h2>' +
+      '<h2>Message :</h2><p style="font-size:1.1rem;">' + data.message + '</p></main>';
 
     const info = await transporter.sendMail({
       from: '<' + data.email + '>',
       to: process.env.GMAIL_USER,
-      subject: 'Mail Reçu via le site saona beauté évasion - "' +data.subject+'"',
+      subject: 'Mail Reçu via le site saona beauté évasion - "' + data.subject + '"',
       html,
     });
 
-    return new Response("Message envoyé !");
+    return new Response("", {
+      status: 200,
+      statusText: "ok"
+    });
   } catch (error) {
-    return new Response("Error during the process !");
+    console.error("Error during sending the email from the contact form", error)
+    return new Response("Error during the process", {
+      status: 400,
+      statusText: error
+    });
   }
 }

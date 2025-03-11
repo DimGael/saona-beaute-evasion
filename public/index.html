@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saona Beauté Evasion</title>
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 
 <body>
@@ -22,8 +23,8 @@
         <ul
             class="flex flex-row items-center justify-between text-yellow-200 text-lg max-w-[1025px] py-4 mx-auto font-[Baskervville]">
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#">ACCUEIL</a></li>
-            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
-                    href="#prestations">NOS PRESTATIONS</a></li>
+            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#prestations">NOS
+                    PRESTATIONS</a></li>
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
                     href="#offrir-un-soin">OFFRIR UN SOIN</a></li>
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
@@ -261,28 +262,44 @@
             <div class="w-[1025px] mx-auto">
                 <h2>NOUS CONTACTER</h2>
                 <p class="mt-2">
-                    Vous pouvez nous contacter par mail via le formulaire suivant.
+                    Vous pouvez nous contacter par mail via le formulaire suivant<br>
+                    Ou par téléphone au 06 17 57 67 98.
                 </p>
                 <form id="mailform" class="mt-6 space-y-4">
                     <div>
-                        <label class="block text-sm font-medium">Adresse mail</label>
-                        <input type="email" placeholder="Votre adresse mail" name="email"
+                        <label class="block text-sm font-medium">Votre adresse mail</label>
+                        <input type="email" placeholder="Votre adresse mail" name="email" required
                             class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium">Objet du message</label>
-                        <input type="text" placeholder="L'objet de votre de message" name="object"
+                        <label class="block text-sm font-medium">Objet de votre message</label>
+                        <input type="text" placeholder="L'objet de votre de message" name="subject"
                             class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium">Votre message</label>
-                        <textarea placeholder="Votre message ..." name="message"
+                        <textarea placeholder="Votre message ..." name="message" required
                             class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white"></textarea>
                     </div>
 
-                    <div class="">
+
+                    <div class="h-captcha" data-sitekey="6f6a34b2-672a-4486-a1f8-fd0a6cbaf066"></div>
+
+                    <div id="alert-mailform-success"
+                        class="alert-mailform hidden p-4 mb-4 text-sm cursor-pointer text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                        role="alert">
+                        <span class="font-medium">Message envoyé ! </span> Votre message nous a correctement été envoyé
+                    </div>
+
+                    <div id="alert-mailform-error"
+                        class="alert-mailform hidden p-4 mb-4 text-sm cursor-pointer text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+                        role="alert">
+                        <span class="font-medium">Une erreur s'est produite</span> Le message n'a pas pu être envoyé
+                    </div>
+
+                    <div>
                         <button type="submit"
                             class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 mx-auto">
                             Envoyer
