@@ -101,6 +101,10 @@
         <section id="prestations" class="bg-secondary scroll-mt-15 py-15">
             <div class="w-[1025px] mx-auto">
                 <h2>PRESTATIONS</h2>
+                <p class="text-[Helvetica]">Vous pouvez faire une demande de carte cadeau en précisant la prestation que
+                    vous
+                    souhaitez en cliquant sur ce lien <a href="#offrir-un-soin" class="underline text-blue-400">offrir
+                        un soin</a> !</p>
                 <article id="prestations-epilation">
                     <h3>Epilations</h3>
                     <ul>
@@ -231,28 +235,97 @@
         <section id="offrir-un-soin" class="py-15 w-[1025px] mx-auto scroll-mt-15">
             <h2 class="text-white">OFFRIR UN SOIN</h2>
             <div class="bg-pink-200 mx-8 p-8 mt-6 rounded-lg">
-                <h2 class="text-xl font-semibold text-purple-900 text-center">Recevoir une carte cadeau</h2>
-                <p class="mt-2 text-center">
-                    Saisissez votre adresse mail et achetez une carte cadeau à offrir à vos proches.
+                <h2 class="text-xl font-semibold text-purple-900 text-center">Demande de carte cadeau</h2>
+                <p class="mt-2 text-center font-bold">
+                    Achetez une carte cadeau à offrir à vos proches !
                 </p>
-                <p class="mt-1 text-center">Recevez par la suite votre carte cadeau via voie postale.</p>
+                <p class="my-2 px-8">Utilisez ce formulaire pour faire une demande de carte cadeau. Vous
+                    obtiendrez un lien de paiement par mail. Une fois le paiement effectué vous recevrez la carte par
+                    voie postale !</p>
+                <p class="mt-1 px-8 italic">Nous n'effectuons les livraisons qu'en France métropolitaine.</p>
 
-                <form class="mt-6 space-y-4">
+                <form class="mt-6 space-y-4" id="giftcard-form">
+                    <h4 class="text-xl">Carte Cadeau</h4>
                     <div>
                         <label class="block text-sm font-medium">Valeur de la carte cadeau</label>
-                        <input type="text" placeholder="Ex : 23€"
-                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                        <input type="number" min="1" placeholder="(Facultatif) Saisissez la valeur de la carte cadeau"
+                            name="giftvalue"
+                            class="w-[60%] mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                        €
+
+                        <p class="mt-1 text-purple-700"><span class="font-bold">Que mettre dans la valeur ?</span>
+                            Si vous préciser les soins que vous voulez en description dans votre demande, vous n'avez
+                            pas besoin de saisir une valeur.
+                        </p>
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium">Adresse mail</label>
-                        <input type="email" placeholder="Votre adresse mail"
+                        <input required type="email" placeholder="Votre adresse mail" name="email"
                             class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
                     </div>
 
-                    <button type="submit"
-                        class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300">
-                        Recevoir ma carte
+
+                    <div>
+                        <label class="block text-sm font-medium">Téléphone
+                            <span class="font-thin italic">Facultatif</span></label>
+                        <input type="tel" placeholder="Saisissez votre numéro de téléphone" name="phone"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <label class="block text-sm font-medium mb-0">Description
+                        <span class="font-thin italic">Facultatif</span></label>
+                    <textarea id="description" name="description"
+                        class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white"
+                        placeholder="Détaillez votre demande, les soins que vous voulez offrir ..."></textarea><br>
+
+                    <h4 class="text-xl">Adresse de livraison</h4>
+                    <div>
+                        <label class="block text-sm font-medium">Nom et Prénom</label>
+                        <input required type="text" placeholder="Votre nom" name="firstname" required
+                            class="w-[40%] mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                        <input required type="text" placeholder="Votre prénom" name="lastname" required
+                            class="w-[40%] mt-1 p-3 ml-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Rue</label>
+                        <input required type="text" placeholder="Saisissez votre rue (Ex: 150 rue des tulipes)"
+                            name="adress" required
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Code Postal</label>
+                        <input required type="text" placeholder="Saisissez votre code postal" name="zipcode" required
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Ville</label>
+                        <input required type="text" placeholder="Saisissez le nom de votre ville" name="city"
+                            class="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
+                    </div>
+
+                    <div class="h-captcha" data-sitekey="6f6a34b2-672a-4486-a1f8-fd0a6cbaf066"></div>
+
+                    <div id="alert-giftcardform-success"
+                        class="hidden p-4 mb-4 text-sm cursor-pointer text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                        role="alert">
+                        <span class="font-medium">Message envoyé ! <span class="italic">Et maintenant ?</span></span> 
+                        Votre demande a bien été envoyé ! Une fois validée vous recevrez un lien de paiement à l'adresse
+                        email que vous avez saisie.
+                    </div>
+
+                    <div id="alert-giftcardform-error"
+                        class="alertHideOnClick hidden p-4 mb-4 text-sm cursor-pointer text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+                        role="alert">
+                        <span class="font-medium">Une erreur s'est produite</span> La demande n'a pas pu être effectuée
+                    </div>
+
+                    <button type="submit" id="giftcardform-submit"
+                        class="w-full text-white py-3 rounded-lg transition duration-300 cursor-pointer">
+                        Envoyer la demande de carte cadeau
                     </button>
                 </form>
             </div>
@@ -263,7 +336,7 @@
                 <h2>NOUS CONTACTER</h2>
                 <p class="mt-2">
                     Vous pouvez nous contacter par mail via le formulaire suivant<br>
-                    Ou par téléphone au 06 17 57 67 98.
+                    ou par téléphone au 06 17 57 67 98.
                 </p>
                 <form id="mailform" class="mt-6 space-y-4">
                     <div>
@@ -288,20 +361,20 @@
                     <div class="h-captcha" data-sitekey="6f6a34b2-672a-4486-a1f8-fd0a6cbaf066"></div>
 
                     <div id="alert-mailform-success"
-                        class="alert-mailform hidden p-4 mb-4 text-sm cursor-pointer text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                        class="alertHideOnClick hidden p-4 mb-4 text-sm cursor-pointer text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
                         role="alert">
                         <span class="font-medium">Message envoyé ! </span> Votre message nous a correctement été envoyé
                     </div>
 
                     <div id="alert-mailform-error"
-                        class="alert-mailform hidden p-4 mb-4 text-sm cursor-pointer text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+                        class="alertHideOnClick hidden p-4 mb-4 text-sm cursor-pointer text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
                         role="alert">
                         <span class="font-medium">Une erreur s'est produite</span> Le message n'a pas pu être envoyé
                     </div>
 
                     <div>
-                        <button type="submit"
-                            class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300 mx-auto">
+                        <button type="submit" id="mailform-submit"
+                            class="w-full text-white py-3 rounded-lg mx-auto cursor-pointer">
                             Envoyer
                         </button>
                     </div>

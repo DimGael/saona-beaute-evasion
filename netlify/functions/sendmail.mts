@@ -10,6 +10,10 @@ export default async (req: Request, context: Context) => {
     const secret = process.env.CAPTCHA_KEY;
     const token = data["h-captcha-response"];
 
+    if (!token) {
+      throw new Error('Captcha was not solved !');
+    }
+
     const captchaData = await verify(secret, token).catch((error) => {
       throw new Error(error);
     })
@@ -35,10 +39,10 @@ export default async (req: Request, context: Context) => {
       '<h2>Objet : ' + data.subject + '</h2>' +
       '<h2>Message :</h2><p style="font-size:1.1rem;">' + data.message + '</p></main>';
 
-    const info = await transporter.sendMail({
+    await transporter.sendMail({
       from: '<' + data.email + '>',
       to: process.env.GMAIL_USER,
-      subject: 'Mail Reçu via le site saona beauté évasion - "' + data.subject + '"',
+      subject: '[SBE] Mail Reçu via le site saona beauté évasion - "' + data.subject + '"',
       html,
     });
 

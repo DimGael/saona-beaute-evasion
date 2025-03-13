@@ -51,7 +51,16 @@ button {
 }
 
 button:hover {
-    cursor: pointer;
+    background-color: #814499;
+}
+
+.btn_disabled {
+    cursor: not-allowed;
+    background-color: #cba6db;
+}
+
+.btn_disabled:hover {
+    background-color: #cba6db;
 }
 
 .stickynavbar {
@@ -110,7 +119,7 @@ button:hover {
 }
 
 section h2 {
-    font-size: 2.25rem; /* tailwind text-4xl */
+    @apply text-4xl;
     font-weight: thin;
     margin-bottom: 1rem;
     font-family: serif;
