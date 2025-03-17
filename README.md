@@ -37,5 +37,9 @@ Le site est hébergé sur **Netlify**, permettant un déploiement rapide et faci
    ```
 5. Ouvrez l'URL fournie par Vite dans votre navigateur.
 
+### Commandes utiles
+
+`make` ou `make help` -> pour afficher les commandes du Makefile
+
 ## 📜 Licence
 Ce projet est sous licence **MIT**. Vous êtes libre de l'utiliser, de le modifier et de le distribuer.
