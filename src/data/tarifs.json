@@ -1,0 +1,236 @@
+{
+    "tarifs": [
+        {
+            "categoryName": "Epilations",
+            "prices": [
+                {
+                    "subcategoryName": "Visage",
+                    "elements": [
+                        {
+                            "label": "Sourcils",
+                            "price": 9
+                        },
+                        {
+                            "label": "Lèvres supérieures",
+                            "price": 8
+                        },
+                        {
+                            "label": "Mentons",
+                            "price": 8
+                        }
+                    ],
+                    "forfaits": [
+                        {
+                            "label": "Sourcils + Lèvres supérieures ou menton",
+                            "price": 15
+                        },
+                        {
+                            "label": "Lèvres supérieures + menton",
+                            "price": 14
+                        },
+                        {
+                            "label": "Sourcils + Lèvres supérieures + menton",
+                            "price": 22
+                        }
+                    ]
+                },
+                {
+                    "subcategoryName": "Corps",
+                    "elements": [
+                        {
+                            "label": "1/2 bras",
+                            "price": 14
+                        },
+                        {
+                            "label": "bras",
+                            "price": 18
+                        },
+                        {
+                            "label": "1/2 jambes",
+                            "price": 20
+                        },
+                        {
+                            "label": "Jambes classiques",
+                            "price": 26
+                        },
+                        {
+                            "label": "Maillot Classique",
+                            "price": 14
+                        },
+                        {
+                            "label": "Maillot Échancré",
+                            "price": 17
+                        },
+                        {
+                            "label": "Maillot Échancré",
+                            "price": 19
+                        },
+                        {
+                            "label": "Maillot intégral",
+                            "price": 23
+                        }
+                    ],
+                    "forfaits": [
+                        {
+                            "label": "1/2 jambes + Maillot classique ou aisselles",
+                            "price": 27
+                        },
+                        {
+                            "label": "jambes entières + Maillot classique ou aisselles",
+                            "price": 27
+                        },
+                        {
+                            "label": "1/2 jambes + Maillot classique + aisselles",
+                            "price": 27
+                        },
+                        {
+                            "label": "Jambes + maillot + aisselles",
+                            "price": 27
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Soin Visage",
+            "elements": [
+                {
+                    "label": "Nettoyage de peau 45 min (peau acnéique \"ada\")",
+                    "price": 33
+                },
+                {
+                    "label": "Soin purifiant 1H15 (peau grasse)",
+                    "price": 36
+                },
+                {
+                    "label": "Soin Hydratant 1H15 (peau sèche)",
+                    "price": 36
+                },
+                {
+                    "label": "Soin anti-âge 1H30 (peau mature)",
+                    "price": 38
+                }
+            ]
+        },
+        {
+            "categoryName": "Soin Corps",
+            "elements": [
+                {
+                    "label": "Soin dos purifiant 45 min (gommage, masque, massage)",
+                    "price": 38
+                },
+                {
+                    "label": "Modelage décontractant 30 min (massage du dos relaxant)",
+                    "price": 28
+                },
+                {
+                    "label": "Massage balinais 1H (massage corps relaxant)",
+                    "price": 45
+                },
+                {
+                    "label": "Modelage drainant 1H (massage du corps, circulation sanguine Modelage amincissant, 20 min par zone)",
+                    "price": 45
+                },
+                {
+                    "label": "Cuisses et ventre",
+                    "price": 27
+                },
+                {
+                    "label": "Cuisses et bras",
+                    "price": 27
+                },
+                {
+                    "label": "Ventre et bras",
+                    "price": 27
+                },
+                {
+                    "label": "Bras, ventre et cuisses",
+                    "price": 47
+                }
+            ]
+        },
+        {
+            "categoryName": "Manucure",
+            "elements": [
+                {
+                    "label": "Soin des mains et des cuticules (massage, limer et cuticule)",
+                    "price": 22
+                },
+                {
+                    "label": "Semi permanent sur angle naturel",
+                    "price": 28
+                },
+                {
+                    "label": "Pose américaine + semi permanent",
+                    "price": 38
+                },
+                {
+                    "label": "Dépose",
+                    "price": 3
+                }
+            ]
+        },
+        {
+            "categoryName": "Pédicure",
+            "elements": [
+                {
+                    "label": "Soin des pieds et des cuticules (massage, limer et cuticules)",
+                    "price": 23
+                },
+                {
+                    "label": "Semi permanent sur ongle naturel",
+                    "price": 28
+                }
+            ]
+        },
+        {
+            "categoryName": "Beauté du Regard",
+            "prices": [
+                {
+                    "subcategoryName": "Cils & sourcils",
+                    "elements": [
+                        {
+                            "label": "Teinture sourcils",
+                            "price": 23
+                        },
+                        {
+                            "label": "Teinture cils",
+                            "price": 23
+                        },
+                        {
+                            "label": "Réhaussement des cils",
+                            "price": 28
+                        }
+                    ],
+                    "forfaits": [
+                        {
+                            "label": "Teinture sourcils + teinture cils",
+                            "price": 37
+                        },
+                        {
+                            "label": "Teinture cils + Réhaussement cils",
+                            "price": 37
+                        },
+                        {
+                            "label": "Teinture cils + Teinture sourcils + Réhaussement cils",
+                            "price": 39
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "categoryName": "Maquillage",
+            "elements": [
+                {
+                    "label": "Le maquillage",
+                    "price": 23
+                },
+                {
+                    "label": "Maquillage mariée avec un essai",
+                    "price": 38
+                }
+            ]
+        }
+    ]
+}

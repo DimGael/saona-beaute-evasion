@@ -1,20 +1,22 @@
-# Salon d'Esthétique - Site Vitrine
+# Saona Beauté Évasion - Site Vitrine
 
 Bienvenue sur le dépôt GitHub du site vitrine pour le salon d'esthéticienne **Saona Beauté Évasion**.
 
 ## 📌 Description
 Ce projet est un site vitrine statique conçu pour présenter les tarifs salon d'esthéticienne **Saona Beauté Évasion**. Il a été développé avec HTML, CSS et utilise le framework TailwindCSS.
 
+Handlebars est le moteur de template utilisé pour la génération des fichiers HTML.
+
 ## Déploiement
 Le site est hébergé sur **Netlify**, permettant un déploiement rapide et facile.
 
 ## 🛠 Technologies utilisées
-- **HTML5**/**CSS3** avec **TailwindCSS**
-- **Vite**
+- **HTML5**/**CSS3** avec **TailwindCSS** et **Handlebars**
 - **HCaptcha** pour sécuriser le formulaire de contact
 - **Gmail** requis pour l'envoi de messages via le formulaire de contact
 
-## 📂 Installation et utilisation
+## 📂 Installation et utilisation (Get Started)
+
 1. Clonez le dépôt :
    ```sh
    git clone git@github.com:DimGael/saona-beaute-evasion.git

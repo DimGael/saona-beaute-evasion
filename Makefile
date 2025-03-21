@@ -3,16 +3,16 @@ help: # Displays this help message
 
 install: # Install dependencies and build
 	npm i
-	npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css
+	npm run build
 
 tailwind-watch: # Watch changes in HTML/CSS files to update output.css
-	npx @tailwindcss/cli -i ./input.css -o ./public/styles/output.css --watch
-
-serve: # Run project in localhost (via Vite)
-	npx vite public
+	npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css --watch
 	
-netlify-serve: # Run project in localhost with netlify functions (via Netlify)
+serve: # Run project in localhost with netlify functions (via Netlify)
 	netlify dev
 
-devfunctions: # Serve netlify function in dev mode (requires Netlify configured)
-	netlify functions:serve
+render: # Renders html files using Handlebars template engine
+	node src/render.js
+
+watch:
+	npm run watch

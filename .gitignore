@@ -4,3 +4,6 @@
 .env
 
 /node_modules/
+
+./public/*.html
+./public/styles/output.css

@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html class="scroll-smooth">
-
-<head>
-    <link rel="stylesheet" href="styles/output.css">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saona Beauté Evasion</title>
-    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-</head>
-
-<body>
-    <header class="text-center pt-10">
-        <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="mx-auto w-25 mb-4" />
-        <h1 class="text-3xl text-yellow-300 mb-8 font-[Helvetica] font-thin">SAONA BEAUTÉ ÉVASION</h1>
-        <div class="separator">
-            <div class="icon"></div>
-        </div>
-    </header>
-
-    <nav id="navbar" class="drop-shadow-xl stickynavbar">
-        <ul
-            class="flex flex-row items-center justify-between text-yellow-200 text-lg max-w-[1025px] py-4 mx-auto font-[Baskervville]">
-            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#">ACCUEIL</a></li>
-            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#prestations">NOS
-                    PRESTATIONS</a></li>
-            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
-                    href="#offrir-un-soin">OFFRIR UN SOIN</a></li>
-            <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
-                    href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-
-    <main id="accueil">
+<main id="accueil">
     <section id="hero" class="bg-secondary text-center py-20 flex flex-col justify-between">
         <strong class="block font-thin text-5xl mt-5 text-gray-800 drop-shadow-lg font-[Didot,serif]">OFFREZ VOUS
             UNE PAUSE
@@ -106,288 +72,57 @@
                 souhaitez en cliquant sur ce lien <a href="#offrir-un-soin" class="underline text-blue-400">offrir
                     un soin</a> !</p>
 
-            <article id="prestation-epilations">
-                <h3>Epilations</h3>
+            {{#each tarifs}}
+            <article id="prestation-{{camelCase this.categoryName}}">
+                <h3>{{this.categoryName}}</h3>
+                {{#if this.prices}}
+                {{#each this.prices}}
                 <ul>
                     <li>
-                        <h4>Visage</h4>
+                        <h4>{{this.subcategoryName}}</h4>
                         <ul>
+                            {{#each this.elements}}
                             <li>
-                                <p>Sourcils</p>
-                                <div>9€</div>
+                                <p>{{this.label}}</p>
+                                <div>{{this.price}}€</div>
                             </li>
-                            <li>
-                                <p>Lèvres supérieures</p>
-                                <div>8€</div>
-                            </li>
-                            <li>
-                                <p>Mentons</p>
-                                <div>8€</div>
-                            </li>
+                            {{/each}}
                         </ul>
                     </li>
 
                     <li>
                         <h4>Forfait</h4>
                         <ul>
+                            {{#each this.forfaits}}
                             <li>
-                                <p>Sourcils + Lèvres supérieures ou menton</p>
-                                <div>15€</div>
+                                <p>{{this.label}}</p>
+                                <div>{{this.price}}€</div>
                             </li>
-                            <li>
-                                <p>Lèvres supérieures + menton</p>
-                                <div>14€</div>
-                            </li>
-                            <li>
-                                <p>Sourcils + Lèvres supérieures + menton</p>
-                                <div>22€</div>
-                            </li>
+                            {{/each}}
                         </ul>
                     </li>
                 </ul>
 
                 <hr>
-                <ul>
-                    <li>
-                        <h4>Corps</h4>
-                        <ul>
-                            <li>
-                                <p>1/2 bras</p>
-                                <div>14€</div>
-                            </li>
-                            <li>
-                                <p>bras</p>
-                                <div>18€</div>
-                            </li>
-                            <li>
-                                <p>1/2 jambes</p>
-                                <div>20€</div>
-                            </li>
-                            <li>
-                                <p>Jambes classiques</p>
-                                <div>26€</div>
-                            </li>
-                            <li>
-                                <p>Maillot Classique</p>
-                                <div>14€</div>
-                            </li>
-                            <li>
-                                <p>Maillot Échancré</p>
-                                <div>17€</div>
-                            </li>
-                            <li>
-                                <p>Maillot Échancré</p>
-                                <div>19€</div>
-                            </li>
-                            <li>
-                                <p>Maillot intégral</p>
-                                <div>23€</div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h4>Forfait</h4>
-                        <ul>
-                            <li>
-                                <p>1/2 jambes + Maillot classique ou aisselles</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>jambes entières + Maillot classique ou aisselles</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>1/2 jambes + Maillot classique + aisselles</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>Jambes + maillot + aisselles</p>
-                                <div>27€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <hr>
-            </article>
-            <article id="prestation-soinVisage">
-                <h3>Soin Visage</h3>
+                {{/each}}
+                {{/if}}
+                {{#if this.elements}}
                 <ul>
                     <li>
                         <ul>
+                            {{#each this.elements}}
                             <li>
-                                <p>Nettoyage de peau 45 min (peau acnéique &quot;ada&quot;)</p>
-                                <div>33€</div>
+                                <p>{{this.label}}</p>
+                                <div>{{this.price}}€</div>
                             </li>
-                            <li>
-                                <p>Soin purifiant 1H15 (peau grasse)</p>
-                                <div>36€</div>
-                            </li>
-                            <li>
-                                <p>Soin Hydratant 1H15 (peau sèche)</p>
-                                <div>36€</div>
-                            </li>
-                            <li>
-                                <p>Soin anti-âge 1H30 (peau mature)</p>
-                                <div>38€</div>
-                            </li>
+                            {{/each}}
                         </ul>
                     </li>
                 </ul>
-                
                 <hr>
+                {{/if}}
             </article>
-            <article id="prestation-soinCorps">
-                <h3>Soin Corps</h3>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <p>Soin dos purifiant 45 min (gommage, masque, massage)</p>
-                                <div>38€</div>
-                            </li>
-                            <li>
-                                <p>Modelage décontractant 30 min (massage du dos relaxant)</p>
-                                <div>28€</div>
-                            </li>
-                            <li>
-                                <p>Massage balinais 1H (massage corps relaxant)</p>
-                                <div>45€</div>
-                            </li>
-                            <li>
-                                <p>Modelage drainant 1H (massage du corps, circulation sanguine Modelage amincissant, 20 min par zone)</p>
-                                <div>45€</div>
-                            </li>
-                            <li>
-                                <p>Cuisses et ventre</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>Cuisses et bras</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>Ventre et bras</p>
-                                <div>27€</div>
-                            </li>
-                            <li>
-                                <p>Bras, ventre et cuisses</p>
-                                <div>47€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <hr>
-            </article>
-            <article id="prestation-manucure">
-                <h3>Manucure</h3>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <p>Soin des mains et des cuticules (massage, limer et cuticule)</p>
-                                <div>22€</div>
-                            </li>
-                            <li>
-                                <p>Semi permanent sur angle naturel</p>
-                                <div>28€</div>
-                            </li>
-                            <li>
-                                <p>Pose américaine + semi permanent</p>
-                                <div>38€</div>
-                            </li>
-                            <li>
-                                <p>Dépose</p>
-                                <div>3€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <hr>
-            </article>
-            <article id="prestation-pédicure">
-                <h3>Pédicure</h3>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <p>Soin des pieds et des cuticules (massage, limer et cuticules)</p>
-                                <div>23€</div>
-                            </li>
-                            <li>
-                                <p>Semi permanent sur ongle naturel</p>
-                                <div>28€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <hr>
-            </article>
-            <article id="prestation-beautéDuRegard">
-                <h3>Beauté du Regard</h3>
-                <ul>
-                    <li>
-                        <h4>Cils &amp; sourcils</h4>
-                        <ul>
-                            <li>
-                                <p>Teinture sourcils</p>
-                                <div>23€</div>
-                            </li>
-                            <li>
-                                <p>Teinture cils</p>
-                                <div>23€</div>
-                            </li>
-                            <li>
-                                <p>Réhaussement des cils</p>
-                                <div>28€</div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <h4>Forfait</h4>
-                        <ul>
-                            <li>
-                                <p>Teinture sourcils + teinture cils</p>
-                                <div>37€</div>
-                            </li>
-                            <li>
-                                <p>Teinture cils + Réhaussement cils</p>
-                                <div>37€</div>
-                            </li>
-                            <li>
-                                <p>Teinture cils + Teinture sourcils + Réhaussement cils</p>
-                                <div>39€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <hr>
-            </article>
-            <article id="prestation-maquillage">
-                <h3>Maquillage</h3>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <p>Le maquillage</p>
-                                <div>23€</div>
-                            </li>
-                            <li>
-                                <p>Maquillage mariée avec un essai</p>
-                                <div>38€</div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <hr>
-            </article>
+            {{/each}}
         </div>
     </section>
 
@@ -540,36 +275,3 @@
         </div>
     </section>
 </main>
-
-    <footer class="py-8 px-8 text-white">
-        <div class="flex justify-between items-center gap-20 w-[1025px] mx-auto">
-            <div class="text-center">
-                <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="w-50 mb-4" />
-                <p>Copyright © 2025</p>
-            </div>
-
-            <p class="w-[40%] text-xl">
-                Ce site est protégé par <a class="underline text-blue-200" href="https://www.hCaptcha.com">hCaptcha</a>,
-                leur
-                <a class="underline text-blue-200" href="https://www.hcaptcha.com/privacy">Politique de
-                    confidentialité</a>
-                et leurs <a class="underline text-blue-200" href="https://www.hcaptcha.com/terms">Conditions
-                    d'utilisation</a> s'appliquent.
-            </p>
-
-            <div>
-                <ul class="flex">
-                    <li class="mr-5"><a target="_blank"
-                            href="https://www.facebook.com/profile.php?id=61569319857908"><img src="images/facebook.png"
-                                width="60" /></a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/saona.beaute.evasion/"><img
-                                src="images/instagram.png" width="60"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts/source.js"></script>
-</body>
-
-</html>
