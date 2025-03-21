@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "netlify dev",
-    "build": "node render.js && npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css",
+    "build": "node src/render.js && npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css",
     "watch": "node src/watch"
   },
   "type": "module",
