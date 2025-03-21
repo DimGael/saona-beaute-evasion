@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e08e52b-9f13-4e13-bd81-653861d69461/deploy-status)](https://app.netlify.com/sites/saona-beaute-evasion/deploys)
+
 # Saona Beauté Évasion - Site Vitrine
 
 Bienvenue sur le dépôt GitHub du site vitrine pour le salon d'esthéticienne **Saona Beauté Évasion**.
