@@ -14,5 +14,8 @@ serve: # Run project in localhost with netlify functions (via Netlify)
 render: # Renders html files using Handlebars template engine
 	node src/render.js
 
-watch:
+watch: # Watch changes in Handlebars views to update public directory
 	npm run watch
+
+vite: # Serve project in localhost using vite (Vite has hot reload)
+	npx vite public
