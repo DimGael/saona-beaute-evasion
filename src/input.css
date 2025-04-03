@@ -79,7 +79,7 @@ main+section {
     @apply border-b-black;
 }
 
-@media (width >= 64rem){
+@media (width >=64rem) {
     .border-side {
         @apply border-r-1;
         @apply border-b-0;
@@ -90,42 +90,44 @@ main+section {
 #prestations article>h3 {
     color: #545700;
     font-family: cursive;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
 #prestations article>ul>li>h4 {
     font-family: cursive;
     font-weight: bold;
-    font-size: 2.25rem;
+    font-size: 2rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
 }
 
 #prestations article>ul {
     display: flex;
-    margin:2rem 1rem;
+    flex-direction: column;
     align-items: start;
 }
 
 #prestations article {
-    margin:2rem 0;
+    margin: 2rem 0;
 }
 
+#prestations article>ul>li {
+    width: 100%;
+}
+
+/* Contains <p>Sourcils</p><div>9€</div> */
 #prestations article>ul>li>ul li {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    @apply text-lg;
+    @apply text-base;
     margin-top: 5px;
-}
-
-#prestations article>ul>li>ul>li div {
-    margin-left: 8rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 #prestations hr {
-    margin:auto;
+    margin: auto;
     margin-top: 2rem;
     width: 50%;
     border: 0;
@@ -134,8 +136,40 @@ main+section {
 }
 
 section h2 {
-    @apply text-4xl;
+    @apply text-3xl;
     font-weight: thin;
     margin-bottom: 1rem;
     font-family: serif;
+}
+
+
+/* DESKTOP RULES */
+@media (width >=64rem) {
+    #prestations article>ul {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 1rem;
+    }
+
+    section h2 {
+        @apply text-4xl;
+    }
+
+    #prestations article>h3 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #prestations article>ul>li>ul li {
+        @apply text-lg;
+    }
+
+    #prestations article>ul>li>ul>li div {
+        margin-left: 8rem;
+    }
+
+    #prestations article>ul>li>h4 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
 }

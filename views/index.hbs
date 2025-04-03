@@ -64,7 +64,7 @@
         </ul>
     </section>
 
-    <section id="prestations" class="bg-secondary scroll-mt-15 py-15">
+    <section id="prestations" class="bg-secondary scroll-mt-15 lg:py-15 py-10 px-5 lg:px-0">
         <div class="lg:w-[1025px] mx-auto">
             <h2>PRESTATIONS</h2>
             <p class="text-[Helvetica]">Vous pouvez faire une demande de carte cadeau en précisant la prestation que
@@ -77,7 +77,7 @@
                 <h3>{{this.categoryName}}</h3>
                 {{#if this.prices}}
                 {{#each this.prices}}
-                <ul>
+                <ul> 
                     <li>
                         <h4>{{this.subcategoryName}}</h4>
                         <ul>
@@ -90,7 +90,7 @@
                         </ul>
                     </li>
 
-                    <li class="ml-30">
+                    <li class="lg:ml-30">
                         <h4>Forfait</h4>
                         <ul>
                             {{#each this.forfaits}}
@@ -128,17 +128,17 @@
         </div>
     </section>
 
-    <section id="offrir-un-soin" class="py-15 lg:w-[1025px] mx-auto scroll-mt-15">
-        <h2 class="text-white">OFFRIR UN SOIN</h2>
+    <section id="offrir-un-soin" class="lg:py-15 py-10 lg:w-[1025px] mx-auto scroll-mt-15">
+        <h2 class="text-white px-5">OFFRIR UN SOIN</h2>
         <div class="bg-pink-200 mx-8 p-8 mt-6 rounded-lg">
             <h2 class="text-xl font-semibold text-purple-900 text-center">Demande de carte cadeau</h2>
             <p class="mt-2 text-center font-bold">
                 Achetez une carte cadeau à offrir à vos proches !
             </p>
-            <p class="my-2 px-8">Utilisez ce formulaire pour faire une demande de carte cadeau. Vous
+            <p class="my-2 lg:px-8 text-sm lg:text-base">Utilisez ce formulaire pour faire une demande de carte cadeau. Vous
                 obtiendrez un lien de paiement par mail. Une fois le paiement effectué vous recevrez la carte par
                 voie postale !</p>
-            <p class="mt-1 px-8 italic">Nous n'effectuons les livraisons qu'en France métropolitaine.</p>
+            <p class="mt-1 lg:px-8 italic text-sm lg:text-base">Nous n'effectuons les livraisons qu'en France métropolitaine.</p>
 
             <form class="mt-6 space-y-4" id="giftcard-form">
                 <h4 class="text-xl">Carte Cadeau</h4>
@@ -149,7 +149,7 @@
                         class="w-[60%] mt-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white">
                     €
 
-                    <p class="mt-1 text-purple-700"><span class="font-bold">Que mettre dans la valeur ?</span>
+                    <p class="mt-1 text-purple-700 text-xs lg:text-base"><span class="font-bold">Que mettre dans la valeur ?</span>
                         Si vous préciser les soins que vous voulez en description dans votre demande, vous n'avez
                         pas besoin de saisir une valeur.
                     </p>
@@ -227,7 +227,7 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-secondary py-15 scroll-mt-15">
+    <section id="contact" class="bg-secondary lg:py-15 py-10 px-5 scroll-mt-15">
         <div class="lg:w-[1025px] mx-auto">
             <h2>NOUS CONTACTER</h2>
             <p class="mt-2">
