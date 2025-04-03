@@ -230,7 +230,8 @@
                     "label": "Maquillage mariée avec un essai",
                     "price": 38
                 }
-            ]
+            ],
+            "isLast": true
         }
     ]
 }

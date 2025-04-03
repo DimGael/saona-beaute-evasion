@@ -9,6 +9,7 @@ tailwind-watch: # Watch changes in HTML/CSS files to update output.css
 	npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css --watch
 	
 serve: # Run project in localhost with netlify functions (via Netlify)
+	npm run build
 	netlify dev
 
 render: # Renders html files using Handlebars template engine

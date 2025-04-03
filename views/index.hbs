@@ -119,7 +119,9 @@
                         </ul>
                     </li>
                 </ul>
-                <hr>
+                {{#unless this.isLast}}
+                    <hr>
+                {{/unless}}
                 {{/if}}
             </article>
             {{/each}}
