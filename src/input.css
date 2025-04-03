@@ -10,7 +10,6 @@ header {
 }
 
 .separator {
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -46,11 +45,11 @@ main+section {
     padding-block: calc(var(--spacing) * 6);
 }
 
-button {
+.btn {
     background-color: #733C89;
 }
 
-button:hover {
+.btn:hover {
     background-color: #814499;
 }
 
@@ -72,6 +71,20 @@ button:hover {
 
 #navbar {
     background-color: #A15AA0;
+}
+
+.border-side {
+    @apply border-r-0;
+    @apply border-b-1;
+    @apply border-b-black;
+}
+
+@media (width >= 64rem){
+    .border-side {
+        @apply border-r-1;
+        @apply border-b-0;
+        @apply border-r-black;
+    }
 }
 
 #prestations article>h3 {
