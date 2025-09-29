@@ -5,8 +5,11 @@ install: # Install dependencies and build
 	npm i
 	npm run build
 
-tailwind-watch: # Watch changes in HTML/CSS files to update output.css
+tailwind-watch: # Watch changes in HTML/CSS files to update CSS
 	npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css --watch
+
+tailwind: # Update CSS
+	npx @tailwindcss/cli -i ./src/input.css -o ./public/styles/output.css
 	
 serve: # Run project in localhost with netlify functions (via Netlify)
 	npm run build
@@ -20,3 +23,9 @@ watch: # Watch changes in Handlebars views to update public directory
 
 vite: # Serve project in localhost using vite (Vite has hot reload)
 	npx vite public
+
+local-dev-start: install render # Install project, watch files for changes (watch and tailwind-watch), and serve project in localhost using vite
+	make tailwind-watch &
+	make watch &
+	make vite
+	

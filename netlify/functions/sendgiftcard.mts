@@ -48,8 +48,13 @@ export default async (req: Request, context: Context) => {
       let result = "<ul>";
 
       for (const key in data) {
-        if (!IGNORE_DATA_KEYS_FOR_EMAIL.includes(key))
-          result += "<li><strong>" + key + ": </strong>" + data[key] + "</li>";
+        if (!IGNORE_DATA_KEYS_FOR_EMAIL.includes(key)) {
+          result += "<li><strong>" + key + ": </strong>" + data[key];
+          if (key === "giftvalue") {
+            result += "€";
+          }
+          result += "</li>";
+        };
       }
 
       return result + "</ul>";

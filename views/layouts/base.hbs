@@ -8,12 +8,13 @@
     <title>Saona Beauté Evasion</title>
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="text-center pt-10">
+    <header class="text-center sm:pt-10 pt-0">
         <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="hidden lg:block mx-auto w-25 mb-4" />
-        <h1 class="text-3xl text-yellow-300 mb-8 font-[Helvetica] font-thin">SAONA BEAUTÉ ÉVASION</h1>
+        <h1 class="text-3xl text-yellow-300 mb-8 font-thin sm:block hidden">Saona Beauté Évasion</h1>
         <div class="hidden lg:flex separator">
             <div class="icon"></div>
         </div>
@@ -21,7 +22,7 @@
 
     <nav id="navbar" class="drop-shadow-xl stickynavbar">
         <ul
-            class="hidden lg:flex flex-row items-center justify-between text-yellow-200 text-lg max-w-[1025px] py-4 mx-auto font-[Baskervville]">
+            class="hidden sm:flex flex-row items-center justify-between text-yellow-200 text-lg max-w-[1025px] py-4 mx-auto font-[Baskervville] px-10">
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#">ACCUEIL</a></li>
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a href="#prestations">NOS
                     PRESTATIONS</a></li>
@@ -30,18 +31,65 @@
             <li class="hover:opacity-90 transition-transform duration-100 hover:scale-101"><a
                     href="#contact">CONTACT</a></li>
         </ul>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+        <div
+            class="relative dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10 sm:hidden">
+            <div class="mx-auto max-w-7xl px-2">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button" command="--toggle" commandfor="mobile-menu"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 bg-[#733C89] text-[#ffe600] hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-end w-max">
+                        <h1 class="text-xl text-[#ffe600] text-left mr-13" id="mobile-h1">Saona Beauté Evasion<h1>
+                        <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="lg:hidden w-15" />
+                    </div>
+                </div>
+            </div>
+
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <div class="space-y-1 px-2 pt-2 pb-3 border-t-1 border-purple-700">
+                    <!-- Current: "bg-gray-900 dark:bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                    <button class="block rounded-md px-3 py-2 text-base font-medium text-yellow-200" command="--toggle"
+                        commandfor="mobile-menu"><a href="#">Accueil</a></button>
+                    <button class="block rounded-md px-3 py-2 text-base font-medium text-yellow-200"
+                        command="--toggle" commandfor="mobile-menu"><a href="#prestations">Nos
+                            prestations</a></button>
+                    <button class="block rounded-md px-3 py-2 text-base font-medium text-yellow-200"
+                        command="--toggle" commandfor="mobile-menu"> <a href="#offrir-un-soin">Offrir un
+                            soin</a></button>
+                    <button class="block rounded-md px-3 py-2 text-base font-medium text-yellow-200"
+                        command="--toggle" commandfor="mobile-menu"><a href="#contact">Contact</a></button>
+                </div>
+            </el-disclosure>
+        </div>
     </nav>
 
     {{{body}}}
 
-    <footer class="py-8 lg:px-8 text-white">
-        <div class="flex flex-col lg:flex-row lg:justify-between justify-center items-center lg:gap-20 lg:w-[1025px] mx-auto">
+    <footer class="py-8 lg:px-8 text-white bg-primary">
+        <div
+            class="flex flex-col lg:flex-row lg:justify-between justify-center items-center lg:gap-20 lg:w-[1025px] mx-auto">
             <div class="px-5 lg:text-center">
                 <img src="images/logo.jpg" alt="Logo de Saona Beauté évasion" class="lg:w-50 w-40 py-5 mb-4" />
                 <p>Copyright © 2025</p>
             </div>
 
-            <p class="lg:w-[40%] lg:text-xl mx-5 text-base mt-5">
+            <p class="lg:w-[40%] lg:text-base mx-5 text-base mt-5">
                 Ce site est protégé par <a class="underline text-blue-200" href="https://www.hCaptcha.com">hCaptcha</a>,
                 leur
                 <a class="underline text-blue-200" href="https://www.hcaptcha.com/privacy">Politique de
