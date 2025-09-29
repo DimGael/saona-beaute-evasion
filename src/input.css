@@ -92,14 +92,14 @@ main+section {
 .border-side {
     @apply border-r-0;
     @apply border-b-1;
-    @apply border-b-black;
+    @apply border-b-[#cacaca49];
 }
 
 @media (width >=64rem) {
     .border-side {
         @apply border-r-1;
+        @apply border-r-[#cacaca49];
         @apply border-b-0;
-        @apply border-r-black;
     }
 }
 
