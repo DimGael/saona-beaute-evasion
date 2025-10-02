@@ -1,6 +1,6 @@
 import { Context } from '@netlify/functions'
 const nodemailer = require('../../node_modules/nodemailer');
-const { verify } = require('hcaptcha');
+const { verify } = require('../../node_modules/hcaptcha');
 require('dotenv').config();
 
 export default async (req: Request, context: Context) => {
