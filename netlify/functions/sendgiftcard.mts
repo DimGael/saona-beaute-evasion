@@ -1,5 +1,5 @@
 import { Context } from '@netlify/functions'
-const nodemailer = require('.../../node_modules/nodemailer');
+const nodemailer = require('../../node_modules/nodemailer');
 const { verify } = require('../../node_modules/hcaptcha');
 require('../../node_modules/dotenv').config();
 
