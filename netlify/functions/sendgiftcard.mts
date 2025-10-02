@@ -1,6 +1,6 @@
 import { Context } from '@netlify/functions'
-const nodemailer = require('nodemailer');
-const { verify } = require('hcaptcha');
+const nodemailer = require('.../../node_modules/nodemailer');
+const { verify } = require('../../node_modules/hcaptcha');
 require('dotenv').config();
 
 interface giftcardDTO {
