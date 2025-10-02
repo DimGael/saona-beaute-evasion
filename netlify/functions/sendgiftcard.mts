@@ -23,6 +23,7 @@ export default async (req: Request, context: Context) => {
   try {
     const data: giftcardDTO = await req.json();
 
+    /*
     const secret = process.env.CAPTCHA_KEY;
     const token = data['h-captcha-response'];
 
@@ -33,6 +34,7 @@ export default async (req: Request, context: Context) => {
       console.log('verification failed');
       throw new Error("Error during captcha validation");
     }
+      */
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
